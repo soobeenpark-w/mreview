@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,4 +21,14 @@ public class MovieDTO {
 
     @Builder.Default
     private List<MovieImageDTO> imageDTOList = new ArrayList<>();
+
+    // Review avg score
+    private double avg;
+
+    // Number of reviews
+    private int reviewCnt;
+
+    private LocalDateTime regDate;
+
+    private LocalDateTime modDate;
 }
